@@ -7,11 +7,11 @@
   outputs = { self, nixpkgs, fetchSWH }: {
     packages.x86_64-linux.gnrc_border_router =
       with import nixpkgs { system = "x86_64-linux"; };
-      callPackage ./firmware_builder { fetchSWH = fetchSWH.lib.fetchSWH; firmware_name = "gnrc_border_router"; firmware_path = ./src; outputHash = "sha256-1kQMis5kXJEelVyBI0ZHbtDGfWVvcHGv4bxsDHto1Z4="; };
+      callPackage ./firmware_builder { fetchSWH = fetchSWH.lib.fetchSWH; firmware_name = "gnrc_border_router"; firmware_path = ./src; outputHash = "0sx5n6m4a7k91mr2djf6k8ppmqil88kiaxy5a5qaw6hiydr4gn9a"; };
 
     packages.x86_64-linux.gnrc_networking =
       with import nixpkgs { system = "x86_64-linux"; };
-      callPackage ./firmware_builder { fetchSWH = fetchSWH.lib.fetchSWH; firmware_name = "gnrc_networking"; firmware_path = ./src; outputHash = "sha256-RSmEAqQ5Ohr9xkbHwAr/HpFAYlSzyAcIbQYvwmw7R0E="; };
+      callPackage ./firmware_builder { fetchSWH = fetchSWH.lib.fetchSWH; firmware_name = "gnrc_networking"; firmware_path = ./src; outputHash = "11g0dfm7hs8aa2s6kmqa1wja8bhcq7xsa1ky4kkjfylhcxwqfa49"; };
 
     packages.x86_64-linux.all-the-firmwares =
       with import nixpkgs { system = "x86_64-linux"; };

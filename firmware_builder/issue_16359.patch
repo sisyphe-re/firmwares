@@ -1,0 +1,12 @@
+diff --git a/sys/net/gnrc/routing/rpl/gnrc_rpl_auto_init.c b/sys/net/gnrc/routing/rpl/gnrc_rpl_auto_init.c
+index 1944c23628..c4b32ab973 100644
+--- a/sys/net/gnrc/routing/rpl/gnrc_rpl_auto_init.c
++++ b/sys/net/gnrc/routing/rpl/gnrc_rpl_auto_init.c
+@@ -29,6 +29,7 @@
+ void auto_init_gnrc_rpl(void)
+ {
+     if (gnrc_netif_highlander()) {
++        while (gnrc_netif_iter(NULL) == NULL) {}
+         gnrc_netif_t *netif = gnrc_netif_iter(NULL);
+         if (netif == NULL) {
+             /* XXX this is just a work-around ideally this would happen with

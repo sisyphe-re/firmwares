@@ -1,0 +1,13 @@
+diff --git a/cpu/stm32/dist/irqs/gen_irqs.py b/cpu/stm32/dist/irqs/gen_irqs.py
+index 8192ea662b..601e53ade6 100755
+--- a/cpu/stm32/dist/irqs/gen_irqs.py
++++ b/cpu/stm32/dist/irqs/gen_irqs.py
+@@ -51,7 +51,7 @@ extern "C" {{
+ 
+ def list_cpu_lines(cpu_fam):
+     """Returns the list CPU lines for a given family"""
+-    headers = os.listdir(STM32_CMSIS_INCLUDE_DIR.format(cpu_fam))
++    headers = sorted(os.listdir(STM32_CMSIS_INCLUDE_DIR.format(cpu_fam)))
+     if "Templates" in headers:
+         headers.remove("Templates")
+     if "partition_stm32l5xx.h" in headers:

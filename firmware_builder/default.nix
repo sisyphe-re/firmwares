@@ -28,6 +28,8 @@ stdenv.mkDerivation rec {
     cacert
   ];
 
+  patches = [ ./issue_16359.patch ./deter.patch ];
+
   postPatch = ''
     for x in $(find . -executable -type f); do
       patchShebangs $x;
