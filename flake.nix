@@ -12,5 +12,17 @@
     packages.x86_64-linux.gnrc_networking =
       with import nixpkgs { system = "x86_64-linux"; };
       callPackage ./firmware_builder { fetchSWH = fetchSWH.lib.fetchSWH; firmware_name = "gnrc_networking"; firmware_path = ./src; outputHash = "sha256-RSmEAqQ5Ohr9xkbHwAr/HpFAYlSzyAcIbQYvwmw7R0E="; };
+
+    packages.x86_64-linux.all-the-firmwares =
+      with import nixpkgs { system = "x86_64-linux"; };
+      buildEnv {
+        name = "all-the-firmwares";
+        paths = [
+          self.packages.x86_64-linux.gnrc_networking
+          self.packages.x86_64-linux.gnrc_border_router
+        ];
+      };
+    defaultPackage.x86_64-linux = self.packages.x86_64-linux.all-the-firmwares;
   };
+
 }
