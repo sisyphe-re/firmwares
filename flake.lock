@@ -1,30 +1,12 @@
 {
   "nodes": {
-    "fetchSWH": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1624182871,
-        "narHash": "sha256-7eOsRlvjYm2iO8Aeax7zxfvkwC8juvaML6KZttRbNos=",
-        "owner": "sisyphe-re",
-        "repo": "fetchSWH",
-        "rev": "37a035b65c526895b36dcaa7eb88c61c0b472418",
-        "type": "github"
-      },
-      "original": {
-        "owner": "sisyphe-re",
-        "repo": "fetchSWH",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1623961232,
-        "narHash": "sha256-5X5v37GTBFdQnc3rvbSPJyAtO+/z1wHZF3Kz61g2Mx4=",
+        "lastModified": 1632418649,
+        "narHash": "sha256-4rZspkiQU7zbsuciRRMgoEPkAF/+FSv2jx/VIPxPVx4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "bad3ccd099ebe9a8aa017bda8500ab02787d90aa",
+        "rev": "056a3c1fae30d06d14b171b9023743c21a23ec1a",
         "type": "github"
       },
       "original": {
@@ -36,11 +18,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1623961232,
-        "narHash": "sha256-5X5v37GTBFdQnc3rvbSPJyAtO+/z1wHZF3Kz61g2Mx4=",
+        "lastModified": 1632418649,
+        "narHash": "sha256-4rZspkiQU7zbsuciRRMgoEPkAF/+FSv2jx/VIPxPVx4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "bad3ccd099ebe9a8aa017bda8500ab02787d90aa",
+        "rev": "056a3c1fae30d06d14b171b9023743c21a23ec1a",
         "type": "github"
       },
       "original": {
@@ -50,10 +32,28 @@
         "type": "github"
       }
     },
+    "rgrunbla": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1632587135,
+        "narHash": "sha256-eJNCJvjYNNRjMaxsePj4HdpNAn7II0a3eG11Cs5mLrw=",
+        "owner": "rgrunbla",
+        "repo": "flakes",
+        "rev": "8443706f7be2ec96f5c2a63b3f621e683ddd3c27",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rgrunbla",
+        "repo": "flakes",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "fetchSWH": "fetchSWH",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs",
+        "rgrunbla": "rgrunbla"
       }
     }
   },
